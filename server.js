@@ -59,6 +59,71 @@ app.get('/', async function (request, response) {
   response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
 })
 
+// drama
+app.get('/drama', async function (request, response) {
+  // Haal alle personen uit de WHOIS API op, van dit jaar
+  const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Drama"}')
+
+  // En haal daarvan de JSON op
+  const personBookGenreJSON = await personBookGenre.json()
+  
+  // personResponseJSON bevat gegevens van alle personen uit alle squads van dit jaar
+  // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
+
+  // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
+  // Geef ook de eerder opgehaalde squad data mee aan de view
+  response.render('drama.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+})
+
+// thriller
+app.get('/thriller', async function (request, response) {
+  // Haal alle personen uit de WHOIS API op, van dit jaar
+  const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Thriller"}')
+
+  // En haal daarvan de JSON op
+  const personBookGenreJSON = await personBookGenre.json()
+  
+  // personResponseJSON bevat gegevens van alle personen uit alle squads van dit jaar
+  // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
+
+  // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
+  // Geef ook de eerder opgehaalde squad data mee aan de view
+  response.render('thriller.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+})
+
+// comedy
+app.get('/comedy', async function (request, response) {
+  // Haal alle personen uit de WHOIS API op, van dit jaar
+  const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Comedy"}')
+
+  // En haal daarvan de JSON op
+  const personBookGenreJSON = await personBookGenre.json()
+  
+  // personResponseJSON bevat gegevens van alle personen uit alle squads van dit jaar
+  // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
+
+  // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
+  // Geef ook de eerder opgehaalde squad data mee aan de view
+  response.render('comedy.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+})
+
+// action
+app.get('/action', async function (request, response) {
+  // Haal alle personen uit de WHOIS API op, van dit jaar
+  const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Action"}')
+
+  // En haal daarvan de JSON op
+  const personBookGenreJSON = await personBookGenre.json()
+  
+  // personResponseJSON bevat gegevens van alle personen uit alle squads van dit jaar
+  // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
+
+  // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
+  // Geef ook de eerder opgehaalde squad data mee aan de view
+  response.render('action.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+})
+
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 app.post('/', async function (request, response) {
   // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
