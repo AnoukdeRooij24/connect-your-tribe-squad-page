@@ -1,0 +1,26 @@
+main {
+    background-image: url(../../bookshelf-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1 {
+    font-family: 'Open Sans',"Relieve", Arial, sans-serif;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: 'Open Sans',"Relieve", Arial, sans-serif;
+    font-size: 2em;
+}
+
+a {
+    font-family: 'Open Sans',"Relieve", Arial, sans-serif;
+    font-size: 1em;
+}
+
+p {
+    font-family: 'Open Sans',"Relieve", Arial, sans-serif;
+    font-size: 1em;
+}
