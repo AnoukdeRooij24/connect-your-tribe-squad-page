@@ -1,26 +1,27 @@
 main {
-    background-image: url(../../bookshelf-background.png);
+    background-image: url(../../docs/bookshelf-selfmade.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-color: rgb(254 230 184); */
+    background-color: #FEE6B8;
 }
-
 
 h1 {
     font-family: 'Open Sans',"Relieve", Arial, sans-serif;
-    font-size: 4em;
+    font-size: 3em;
 }
 
 h2 {
     font-family: 'Open Sans',"Relieve", Arial, sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 a {
     font-family: 'Open Sans',"Relieve", Arial, sans-serif;
-    font-size: 1em;
+    font-size: .75em;
 }
 
 p {
     font-family: 'Open Sans',"Relieve", Arial, sans-serif;
-    font-size: 1em;
+    font-size: .75em;
 }

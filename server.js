@@ -60,7 +60,7 @@ app.get('/', async function (request, response) {
 })
 
 // drama
-app.get('/drama', async function (request, response) {
+app.get('/genre', async function (request, response) {
   // Haal alle personen uit de WHOIS API op, van dit jaar
   const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Drama"}')
 
@@ -72,11 +72,11 @@ app.get('/drama', async function (request, response) {
 
   // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
   // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render('drama.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+  response.render('genre.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
 })
 
 // thriller
-app.get('/thriller', async function (request, response) {
+app.get('/genre', async function (request, response) {
   // Haal alle personen uit de WHOIS API op, van dit jaar
   const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Thriller"}')
 
@@ -88,11 +88,11 @@ app.get('/thriller', async function (request, response) {
 
   // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
   // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render('thriller.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+  response.render('genre.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
 })
 
 // comedy
-app.get('/comedy', async function (request, response) {
+app.get('/genre', async function (request, response) {
   // Haal alle personen uit de WHOIS API op, van dit jaar
   const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Comedy"}')
 
@@ -104,11 +104,11 @@ app.get('/comedy', async function (request, response) {
 
   // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
   // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render('comedy.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+  response.render('genre.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
 })
 
 // action
-app.get('/action', async function (request, response) {
+app.get('/genre', async function (request, response) {
   // Haal alle personen uit de WHOIS API op, van dit jaar
   const personBookGenre = await fetch('https://fdnd.directus.app/items/person/?filter={"fav_book_genre":"Action"}')
 
@@ -120,7 +120,7 @@ app.get('/action', async function (request, response) {
 
   // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
   // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render('action.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
+  response.render('genre.liquid', {persons: personBookGenreJSON.data, squads: squadResponseJSON.data})
 })
 
 
